@@ -1,210 +1,71 @@
-/* Halloween Holiday Page
-   HTML intentionally left unchanged.
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Slab:wght@400;600;700&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    background:
-        radial-gradient(circle at 50% 15%, rgba(255, 98, 0, 0.12), transparent 28%),
-        linear-gradient(180deg, #090909 0%, #160b18 55%, #050505 100%);
-    color: #f2e8d5;
-    font-family: "Roboto Slab", Georgia, serif;
-}
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body { margin: 0; min-height: 100vh; background: #080707; color: #f3e7d0; font-family: "Roboto Slab", Georgia, serif; }
 
 #wrapper {
-    width: min(1100px, 92%);
-    margin: 35px auto;
-    background: rgba(15, 12, 18, 0.96);
-    border: 2px solid #5d2410;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow:
-        0 0 0 6px rgba(255, 92, 0, 0.04),
-        0 18px 60px rgba(0, 0, 0, 0.8),
-        0 0 35px rgba(255, 69, 0, 0.12);
-}
-
-/* Navigation */
-header {
-    padding: 18px 28px;
-    background:
-        linear-gradient(90deg, #120b16, #24101a, #120b16);
-    border-bottom: 2px solid #6d2a0d;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+    min-height: 100vh;
+    width: 100%;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    flex-wrap: wrap;
+    background: linear-gradient(rgba(5,5,5,.48), rgba(8,5,8,.86)), url("../images/halloween.png") center center / cover fixed no-repeat;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
 }
 
-nav li {
-    padding: 10px 18px;
-    color: #ff8a24;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid #713016;
-    border-radius: 999px;
-    background: #1a1019;
-    box-shadow: inset 0 0 12px rgba(255, 83, 0, 0.08);
-    transition: 0.25s ease;
-}
+header { display: none; }
 
-nav li:hover {
-    color: #fff3d6;
-    background: #8b2e0a;
-    border-color: #ff6a00;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 18px rgba(255, 74, 0, 0.3);
-    cursor: pointer;
-}
-
-/* Main content */
 main {
-    padding: 50px clamp(24px, 6vw, 75px) 65px;
-    text-align: center;
+    min-height: calc(100vh - 70px);
+    padding: 90px clamp(24px, 8vw, 120px) 90px;
+    background: linear-gradient(90deg, rgba(0,0,0,.25), rgba(0,0,0,.05) 50%, rgba(0,0,0,.35));
 }
 
 h1 {
-    margin: 0 0 30px;
-    color: #ff7518;
-    font-family: "Creepster", "Impact", fantasy;
-    font-size: clamp(4rem, 10vw, 7.5rem);
-    font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: 3px;
-    text-shadow:
-        3px 3px 0 #391006,
-        0 0 12px rgba(255, 89, 0, 0.7),
-        0 0 35px rgba(255, 55, 0, 0.3);
-    animation: flicker 4s infinite;
-}
-
-main > img {
-    display: block;
-    width: min(100%, 650px);
     margin: 0 auto 55px;
-    border: 5px solid #3b1b13;
-    border-radius: 12px;
-    box-shadow:
-        0 0 0 2px #8d3b0d,
-        0 15px 35px rgba(0, 0, 0, 0.7),
-        0 0 35px rgba(255, 72, 0, 0.18);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    color: #ff7417;
+    font-family: "Creepster", Impact, fantasy;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 4px 4px 0 #1b0903, 0 0 18px rgba(255,84,0,.8), 0 0 45px rgba(255,50,0,.35);
 }
 
-main > img:hover {
-    transform: scale(1.025) rotate(-1deg);
-    box-shadow:
-        0 0 0 2px #ff6a00,
-        0 18px 45px rgba(0, 0, 0, 0.8),
-        0 0 45px rgba(255, 72, 0, 0.3);
-}
+main > img { display: none; }
 
-/* Content cards */
 section {
     max-width: 850px;
-    margin: 24px auto;
-    padding: 25px 30px;
+    margin: 0 auto 26px;
+    padding: 24px 30px;
     text-align: left;
-    background:
-        linear-gradient(135deg, rgba(48, 20, 24, 0.9), rgba(20, 14, 23, 0.95));
-    border: 1px solid #5c2818;
-    border-left: 5px solid #e65b12;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-    transition: 0.25s ease;
+    background: rgba(10,8,11,.78);
+    border: 1px solid rgba(255,104,23,.5);
+    border-left: 7px solid #e96512;
+    border-radius: 0;
+    box-shadow: 10px 10px 0 rgba(0,0,0,.35);
+    backdrop-filter: blur(2px);
 }
 
-section:hover {
-    transform: translateX(6px);
-    border-left-color: #ff8a24;
-    box-shadow: 0 12px 30px rgba(255, 68, 0, 0.12);
-}
+h2 { margin: 0 0 9px; color: #ff8126; font-family: "Creepster", Impact, fantasy; font-size: 2.5rem; font-weight: 400; letter-spacing: 1px; }
+p { margin: 0; color: #eee2cf; font-size: 1rem; line-height: 1.75; }
 
-h2 {
-    margin: 0 0 10px;
-    color: #ff8a24;
-    font-family: "Creepster", "Impact", fantasy;
-    font-size: 2.4rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-p {
-    margin: 0;
-    color: #d8cdbb;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-/* Footer */
 footer {
     padding: 22px;
+    color: #c5b6a1;
+    background: rgba(5,5,6,.9);
+    border-top: 2px solid #64280f;
+    border-radius: 0;
     text-align: center;
-    color: #a99a88;
-    background: #0b090d;
-    border-top: 2px solid #4f1f10;
-    font-size: 0.9rem;
+    font-size: .9rem;
     letter-spacing: 1px;
 }
 
-/* Subtle spooky light effect */
-@keyframes flicker {
-    0%, 18%, 20%, 22%, 63%, 64%, 100% {
-        opacity: 1;
-    }
-    19%, 21%, 62% {
-        opacity: 0.86;
-    }
-}
-
-/* Smaller screens */
 @media (max-width: 600px) {
-    #wrapper {
-        width: 95%;
-        margin: 15px auto;
-        border-radius: 12px;
-    }
-
-    header {
-        padding: 14px;
-    }
-
-    nav ul {
-        gap: 7px;
-    }
-
-    nav li {
-        padding: 8px 12px;
-        font-size: 0.8rem;
-    }
-
-    main {
-        padding: 38px 18px 45px;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    section {
-        padding: 20px;
-    }
+    main { padding: 60px 16px; min-height: calc(100vh - 60px); }
+    h1 { font-size: 4rem; margin-bottom: 40px; }
+    section { padding: 20px; margin-bottom: 20px; box-shadow: 6px 6px 0 rgba(0,0,0,.35); }
 }
